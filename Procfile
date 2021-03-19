@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run app_avaliacao.py
+web: streamlit run --server.port $PORT webservice.py

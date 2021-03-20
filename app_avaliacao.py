@@ -1,4 +1,5 @@
 # importando as bibiliotecas
+from sklearn.ensemble import BaggingClassifier
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -7,7 +8,9 @@ import pickle
 
 
 # Carregando o modelo
-model =  pickle.load(open('avaliacao_v2.pkl', 'rb'))
+abrir =  open("avaliacao_v2.pkl", "rb")
+model = pickle.load(abrir)
+abrir.close()
 
 
 # Criando uma função para receber as features
